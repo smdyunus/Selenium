@@ -16,23 +16,27 @@ public class cssSelectorTest
 		Thread.sleep(1000);
 		WebElement signinbtn = driver.findElement(By.className("nav-line-1-container"));
 		signinbtn.click();
+		//Css with ID
 		//WebElement email = driver.findElement(By.cssSelector("input[id=ap_email]"));
 		// tag[Attributename='AttributeValue']
-		// tag#AttributeValue
-		//WebElement email = driver.findElement(By.cssSelector("input#ap_email"));
-		//Below is for css with classname
+		Thread.sleep(2000);
+		//CSS selector by class
 		//WebElement email = driver.findElement(By.cssSelector("input.a-input-text.a-span12.auth-autofocus.auth-required-field"));
-		//css Start with
-		//WebElement email = driver.findElement(By.cssSelector("input[id^=ap_em]"));
-		//css End with
-		//WebElement email = driver.findElement(By.cssSelector("input[id$=email]"));
-		//SubString
-		WebElement email = driver.findElement(By.cssSelector("input[id*=mai]"));
 		
+		//Start with
+		//WebElement email = driver.findElement(By.cssSelector("input[id^=ap_em]"));
+		
+		//End with
+		//WebElement email = driver.findElement(By.cssSelector("input[id$=email]"));
+		
+		//substring
+		WebElement email = driver.findElement(By.cssSelector("input[id*=ema]"));
 		email.sendKeys("9620301980");
+		
 		Thread.sleep(1000);
 		driver.quit();		
-
+	
+		
 	}
 	
 }
